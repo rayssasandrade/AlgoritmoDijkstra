@@ -13,6 +13,10 @@ public class Grafo {
         this.grafo = grafo;
     }
 
+    public void addVertice(Vertice v){
+        this.grafo.add(v);
+    }
+
     public Vertice getVerticesByName(String nome) {
         for (int i = 0; i < this.getVertices().size(); i++) {
             if (nome.equalsIgnoreCase(this.getVertices().get(i).getNome())) {
