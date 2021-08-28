@@ -12,18 +12,22 @@ public class Main {
 
         System.out.println("Cidades do mapa: Paripiranga, Simão Dias, Lagarto, Itabaiana e Aracajú");
         System.out.println("Digite a cidade de origem: ");
-        String cidadeOrigem = input.next().trim();
+        String cidadeOrigem = input.nextLine();
         Vertice v1 = grafo.getVerticesByName(cidadeOrigem);
 
         System.out.println("Digite a cidade de destino: ");
-        String cidadeDestino = input.next().trim();
+        String cidadeDestino = input.nextLine();
         Vertice v2 = grafo.getVerticesByName(cidadeDestino);
 
         List<Vertice> resultado = new ArrayList<Vertice>();
         AlgoritmoDijkstra algoritmo = new AlgoritmoDijkstra();
         resultado = algoritmo.menorCaminhoDijkstra(grafo, v1, v2);
-        System.out.println("Esse é o menor caminho feito pelo algoritmo:"
-                + resultado);
+        if(resultado.get(0).getNome() != v1.getNome() || (resultado.size() == 1 && resultado.get(0).getNome() == v1.getNome())){
+            System.out.println("Não é possível chegar a este caminho");
+        } else {
+            System.out.println("Esse é o menor caminho feito pelo algoritmo:"
+                    + resultado);
+        }
 
     }
 
