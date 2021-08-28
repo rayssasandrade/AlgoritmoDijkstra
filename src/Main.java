@@ -64,12 +64,10 @@ public class Main {
         ArrayList<Aresta> arestas2 = new ArrayList<>();
         ArrayList<Aresta> arestas3 = new ArrayList<>();
         ArrayList<Aresta> arestas4 = new ArrayList<>();
-        ArrayList<Aresta> arestas5 = new ArrayList<>();
         ArrayList<Vertice> vertices1 = new ArrayList<>();
         ArrayList<Vertice> vertices2 = new ArrayList<>();
         ArrayList<Vertice> vertices3 = new ArrayList<>();
         ArrayList<Vertice> vertices4 = new ArrayList<>();
-        ArrayList<Vertice> vertices5 = new ArrayList<>();
 
         arestas1.add(a5);
         arestas1.add(a2);
